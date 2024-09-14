@@ -1,0 +1,98 @@
+[user]
+	name = Gaurav Kumar
+	email = 42230870+gaurav-kumar-gks@users.noreply.github.com
+[alias]
+	# all aliases
+	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'	
+	
+	# add
+	a = add
+	aa = add --all
+
+	# branch
+	bd = branch -D
+	
+	# commits
+	cm = commit -m
+        cma = commit --amend -no-edit
+	edit = commit --amend -only
+
+	# checkout
+        co = checkout
+	cob = checkout -b
+	col = checkout -l
+	coma = checkout master
+	com = checkout main
+
+	# cherrypicks
+	cp = cherry-pick
+	cpc = cherry-pick --continue
+	
+	# pretty log
+	l = log --oneline
+	ll = log --pretty=format:"%C(yellow)%h\\ %ah%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short	
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	
+	# push
+	po = push origin
+	poof = push origin --force-with-lease
+	
+	# rebase
+	rb = rebase
+	rbm = rebase main
+	rbma = rebase master
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	
+	# status
+	s = status -s
+	
+	# stash
+	st = stash
+	stl = stash list
+	sta = stash apply
+	
+	# merge
+	m = merge
+	mf = merge --ff-only
+	mc = merge --continue
+
+	# others
+	oops = reset HEAD~1 --soft
+	undo = reset HEAD~1 --mixed
+[branch]
+	sort = committerdate
+[color]
+	ui = true
+[color "branch"]
+	upstream = cyan
+[column]
+	ui = auto
+[commit]
+	verbose = true
+[core]
+	untrackedcache = true
+	fsmonitor = true
+	excludesfile = ~/.gitignore_global
+	editor = nano
+[fetch]
+	writeCommitGraph = true
+[pager]
+	log = less
+	branch = less
+[pull]
+	# pull only if fast forward
+	ff = only
+[push]
+	default = upstream
+[rebase]
+	autoSquash = true
+	autoStash = true
+[merge]
+	ff = false
+	conflictStyle = diff3
+[rerere]
+	# remember the previous merge conflicts and how they were resolved
+	enabled = true
+	autoupdate = true
+
