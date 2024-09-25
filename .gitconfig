@@ -14,8 +14,8 @@
 	
 	# commits
 	cm = commit -m
-        cma = commit --amend -no-edit
-	edit = commit --amend -only
+        cma = commit --amend --no-edit
+	edit = commit --amend --only
 
 	# checkout
         co = checkout
@@ -72,7 +72,7 @@
 	verbose = true
 [core]
 	untrackedcache = true
-	fsmonitor = true
+	fsmonitor = false
 	excludesfile = ~/.gitignore_global
 	editor = nano
 [fetch]
