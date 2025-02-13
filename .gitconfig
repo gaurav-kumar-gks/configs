@@ -1,6 +1,6 @@
 [user]
-	name = Gaurav Kumar
-	email = 42230870+gaurav-kumar-gks@users.noreply.github.com
+	name = kimi no na wa
+	email = no reply email here
 [alias]
 	# all aliases
 	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'	
