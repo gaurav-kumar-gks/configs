@@ -20,7 +20,7 @@
 	# checkout
         co = checkout
 	cob = checkout -b
-	col = checkout -l
+	col = checkout -
 	coma = checkout master
 	com = checkout main
 
